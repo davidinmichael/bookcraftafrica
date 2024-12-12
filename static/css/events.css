@@ -1,0 +1,27 @@
+/*** Events Start ***/
+.event .tab-class .nav-item a.active {
+	background: var(--bs-primary) !important;
+}
+
+.event .event-img .event-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(212, 167, 98, 0.7);
+	border-radius: 8px;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 1;
+}
+
+.event .event-img:hover .event-overlay {
+	opacity: 1;
+}
+
+.event-holder {
+	margin-bottom: 15px;
+}
+
+/*** Events End ***/
