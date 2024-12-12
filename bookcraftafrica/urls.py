@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     path("", include("core.urls")),
+    path("admin-app/", include("admin_app.urls")),
 ]
 
 if settings.DEBUG:
