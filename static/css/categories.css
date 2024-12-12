@@ -45,11 +45,22 @@
 
 .portfolio .filters a.active {
   opacity: 1;
-  background: #F85C70;
+  background: #F26B0F;
   color: #fff;
 }
 
-.portfolio .portfolio-container .portfolio-item {
+.portfolio-item {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 10px 15px;
+  overflow: hidden;
+  border-radius: 2px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.portfolio .portfolio-container {
   position: relative;
   padding-left: 0;
   padding-right: 0;
