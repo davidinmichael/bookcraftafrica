@@ -14,5 +14,6 @@ class HomePage(View):
 			"sliders": HeaderSlider.objects.all().order_by("-id")[:2],
 			"top_picks": books[:5],
 			"books": books[:10],
+			"blogs": Blog.objects.all().order_by("-id")[:3],
 		}
 		return render(request, "core/index.html", context)

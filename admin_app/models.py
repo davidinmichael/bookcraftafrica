@@ -70,7 +70,7 @@ class Blog(BaseModel):
 			self.slug = f"{base_slug}-{self.id}"
 
 		if not self.snippet:
-			self.snippet = ' '.join(self.description.split()[:20])
+			self.snippet = ' '.join(self.blog_body.split()[:20])
 		return super().save(*args, **kwargs)
 
 	def __str__(self):
