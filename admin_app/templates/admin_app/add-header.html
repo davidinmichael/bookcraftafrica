@@ -166,78 +166,95 @@
         <div class="container contact-page py-5 px-lg-0">
             <div class="row g-5 mx-lg-0">
 				
+                <!-- Blog -->
                 <div class="col-md-6 contact-form wow fadeIn" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">Get In Touch</h6>
-                    <h1 class="mb-4">Contact For Any Query</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <h6 class="text-secondary text-uppercase">Blog</h6>
+                    <h1 class="mb-4">Create a Blog</h1>
+                    <p class="mb-4">Add a Blog to the platform.</a>.</p>
                     <div class="bg-light p-4">
                         <form>
                             <div class="row g-3">
-                                <div class="col-md-6">
+                                <!-- Title -->
+                                <div class="col-md-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" name="title" class="form-control" id="title" placeholder="Blog Title">
+                                        <label for="title">Blog Title</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+
+                                <!-- Body -->
+                                <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="file" accept="image/*" name="blog_img" class="form-control" id="blog_img" placeholder="Blog Body">
+                                        <label for="blog_img">Blog Image</label>
+                                    </div>
+                                </div>
+
+                                <!-- blog Image -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea name="blog_body" class="form-control" placeholder="Blog Body" id="blog_body" style="height: 100px"></textarea>
+                                        <label for="blog_body">Blog Body</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Add Blog</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
 
+                <!-- Event -->
                 <div class="col-md-6 contact-form wow fadeIn" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">Get In Touch</h6>
-                    <h1 class="mb-4">Contact For Any Query</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <h6 class="text-secondary text-uppercase">Event</h6>
+                    <h1 class="mb-4">Add Event to the platform.</h1>
+                    <p class="mb-4">Add Events to the platform.</p>
                     <div class="bg-light p-4">
                         <form>
                             <div class="row g-3">
+
+                                <!-- Event Title -->
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="text" name="title" class="form-control" id="title" placeholder="Event Title">
+                                        <label for="title">Event Title</label>
+                                    </div>
+                                </div>
+
+                                <!-- Event Date -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="date" name="event_date" class="form-control" id="event_date" placeholder="Event Date">
+                                        <label for="event_date">Event Date</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+
+                                <!-- Event Time -->
+                                <div class="col-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="time" name="event_time" class="form-control" id="event_time" placeholder="Event Time">
+                                        <label for="event_time">Event Time</label>
+                                    </div>
+                                </div>
+
+                                <!-- Event Image -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="file" name="event_img" accept="image/*" class="form-control" id="event_img" placeholder="Event Image">
+                                        <label for="event_img">Event Image</label>
+                                    </div>
+                                </div>
+
+                                <!-- Event Description -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea name="description" class="form-control" placeholder="Event Description" id="description" style="height: 100px"></textarea>
+                                        <label for="description">Event Description</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Create Event</button>
                                 </div>
                             </div>
                         </form>
