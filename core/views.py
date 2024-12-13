@@ -9,8 +9,10 @@ from admin_app.models import (
 class HomePage(View):
 
 	def get(self, request):
+		books = Book.objects.all().order_by("-id")
 		context = {
 			"sliders": HeaderSlider.objects.all().order_by("-id")[:2],
-			"top_picks": Book.objects.all().order_by("-id")[:5],
+			"top_picks": books[:5],
+			"books": books[:10],
 		}
 		return render(request, "core/index.html", context)
