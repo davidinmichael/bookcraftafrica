@@ -42,7 +42,7 @@ class Book(BaseModel):
 	book_type = models.CharField(max_length=20, null=True, blank=True)
 	book_cover = models.ImageField(upload_to="book_cover/")
 	snippet = models.TextField(null=True, blank=True)
-	slug = models.SlugField()
+	slug = models.SlugField(blank=True, null=True)
 
 	def save(self, *args, **kwargs):
 		if not self.slug:
@@ -62,7 +62,7 @@ class Blog(BaseModel):
 	blog_body = models.TextField()
 	blog_img = models.ImageField(upload_to="blog_img/", null=True, blank=True)
 	snippet = models.TextField(null=True, blank=True)
-	slug = models.SlugField()
+	slug = models.SlugField(blank=True, null=True)
 
 	def save(self, *args, **kwargs):
 		if not self.slug:

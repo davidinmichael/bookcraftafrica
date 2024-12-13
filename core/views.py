@@ -10,6 +10,7 @@ class HomePage(View):
 
 	def get(self, request):
 		context = {
-			"sliders": HeaderSlider.objects.all().order_by("-id")[:2]
+			"sliders": HeaderSlider.objects.all().order_by("-id")[:2],
+			"top_picks": Book.objects.all().order_by("-id")[:5],
 		}
 		return render(request, "core/index.html", context)

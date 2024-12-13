@@ -9,27 +9,24 @@
     </div>
     <!-- <div class="row g-4"> -->
     <div class="owl-carousel owl-theme">
+      {% for top_pick in top_picks %}
+
       <div class="item" data-wow-delay="0.3s">
         <div class="service-item p-4">
           <div class="overflow-hidden mb-4 ratio ratio-1x1">
-            <img
-              class="img-fluid"
-              src="{% static 'img/service-1a.jpg' %}"
-              alt=""
-            />
+            <img class="img-fluid" src="{{ top_pick.book_cover.url }}" alt="" />
           </div>
-          <h4 class="mb-3">Air Freight</h4>
-          <p>
-            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
-            diam.
-          </p>
+          <h4 class="mb-3">{{ top_pick.title }}</h4>
+          <p>{{ top_pick.snippet }}</p>
           <a class="btn-slide mt-2" href=""
             ><i class="fa fa-arrow-right"></i><span>Read More</span></a
           >
         </div>
       </div>
 
-      <div class="item" data-wow-delay="0.3s">
+      {% endfor %}
+
+      <!-- <div class="item" data-wow-delay="0.3s">
         <div class="service-item p-4">
           <div class="overflow-hidden mb-4">
             <img
@@ -143,7 +140,7 @@
             ><i class="fa fa-arrow-right"></i><span>Read More</span></a
           >
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

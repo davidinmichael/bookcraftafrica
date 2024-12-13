@@ -31,7 +31,10 @@ class BookView(View):
 		form = BookForm(request.POST, request.FILES)
 		if form.is_valid():
 			book = form.save()
+			print("Book Saved")
 			return redirect("add_items")
+		print("Book not saved")
+		print(form.errors)
 		return redirect("home")
 
 
