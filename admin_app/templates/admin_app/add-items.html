@@ -13,7 +13,8 @@
                     <h1 class="mb-4">Create Banner Slider</h1>
                     <p class="mb-4">Create the Landing page banner slider here.</p>
                     <div class="bg-light p-4">
-                        <form>
+                        <form action="{% url 'add_header' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="row g-3">
 								
 								<!-- Title -->
@@ -70,7 +71,8 @@
                     <h1 class="mb-4">Add Book</h1>
                     <p class="mb-4">Add Books to the platform here.</a>.</p>
                     <div class="bg-light p-4">
-                        <form>
+                        <form action="{% url 'add_book' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="row g-3">
 
 								<!-- Title -->
@@ -172,7 +174,8 @@
                     <h1 class="mb-4">Create a Blog</h1>
                     <p class="mb-4">Add a Blog to the platform.</a>.</p>
                     <div class="bg-light p-4">
-                        <form>
+                        <form action="{% url 'add_blog' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="row g-3">
                                 <!-- Title -->
                                 <div class="col-md-12">
@@ -211,7 +214,8 @@
                     <h1 class="mb-4">Add Event to the platform.</h1>
                     <p class="mb-4">Add Events to the platform.</p>
                     <div class="bg-light p-4">
-                        <form>
+                        <form action="{% url 'add_event' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="row g-3">
 
                                 <!-- Event Title -->
