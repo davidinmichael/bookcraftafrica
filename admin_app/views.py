@@ -15,7 +15,7 @@ class AddPlatformItems(View):
 		return render(request, "admin_app/add-items.html")
 
 
-class HeaderSliderView(Views):
+class HeaderSliderView(View):
 
 	def post(self, request):
 		form = HeaderSliderForm(request.POST, request.FILES)
@@ -25,7 +25,7 @@ class HeaderSliderView(Views):
 		return redirect("home")
 
 
-class BookView(Views):
+class BookView(View):
 
 	def post(self, request):
 		form = BookForm(request.POST, request.FILES)
@@ -35,7 +35,7 @@ class BookView(Views):
 		return redirect("home")
 
 
-class BlogView(Views):
+class BlogView(View):
 
 	def post(self, request):
 		form = BlogForm(request.POST, request.FILES)
@@ -45,7 +45,7 @@ class BlogView(Views):
 		return redirect("home")
 
 
-class EventView(Views):
+class EventView(View):
 
 	def post(self, request):
 		form = EventForm(request.POST, request.FILES)
