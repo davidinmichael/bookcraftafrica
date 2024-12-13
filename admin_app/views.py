@@ -33,3 +33,23 @@ class BookView(Views):
 			book = form.save()
 			return redirect("add-items")
 		return redirect("home")
+
+
+class BlogView(Views):
+
+	def post(self, request):
+		form = BlogForm(request.POST, request.FILES)
+		if form.is_valid():
+			blog = form.save()
+			return redirect("add-items")
+		return redirect("home")
+
+
+class EventView(Views):
+
+	def post(self, request):
+		form = EventForm(request.POST, request.FILES)
+		if form.is_valid():
+			event = form.save()
+			return redirect("add-items")
+		return redirect("home")
