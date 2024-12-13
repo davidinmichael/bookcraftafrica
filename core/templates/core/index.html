@@ -3,8 +3,12 @@
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5">
   <div class="owl-carousel header-carousel position-relative mb-5">
+
+    <!-- Slider -->
+     {% for slider in sliders %}
+       
     <div class="owl-carousel-item position-relative">
-      <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="" />
+      <img class="img-fluid" src="{{ slider.banner_img.url }}" alt="Book Craft Africa Header" />
       <div
         class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
         style="background: rgba(6, 3, 21, 0.5)"
@@ -16,30 +20,31 @@
                 Book Craft Africa
               </h5>
               <h1 class="display-3 text-white animated slideInDown mb-4">
-                Discover Your Next Favorite
-                <span class="text-primary">Book </span> or Publish Your Own
-                Masterpiece!
+                {{ slider.title }}
               </h1>
               <p class="fs-5 fw-medium text-white mb-4 pb-2">
-                Explore our vast collection or join our community of authors
-                today.
+                {{ slider.subtitle }}
               </p>
               <a
                 href=""
                 class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                >Read Now</a
+                >{{ slider.button_one }}</a
               >
               <a
                 href=""
                 class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
-                >Learn About Publishing</a
+                >{{ slider.button_two }}</a
               >
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="owl-carousel-item position-relative">
+
+    {% endfor %}
+
+    <!-- Item 2 -->
+    <!-- <div class="owl-carousel-item position-relative">
       <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="" />
       <div
         class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
@@ -74,7 +79,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <!-- Items End -->
   </div>
 </div>
 <!-- Carousel End -->

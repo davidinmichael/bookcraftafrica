@@ -21,7 +21,7 @@ class HeaderSliderView(View):
 		form = HeaderSliderForm(request.POST, request.FILES)
 		if form.is_valid():
 			header = form.save()
-			return redirect("add-items")
+			return redirect("add_items")
 		return redirect("home")
 
 
@@ -31,7 +31,7 @@ class BookView(View):
 		form = BookForm(request.POST, request.FILES)
 		if form.is_valid():
 			book = form.save()
-			return redirect("add-items")
+			return redirect("add_items")
 		return redirect("home")
 
 
@@ -41,7 +41,7 @@ class BlogView(View):
 		form = BlogForm(request.POST, request.FILES)
 		if form.is_valid():
 			blog = form.save()
-			return redirect("add-items")
+			return redirect("add_items")
 		return redirect("home")
 
 
@@ -51,5 +51,5 @@ class EventView(View):
 		form = EventForm(request.POST, request.FILES)
 		if form.is_valid():
 			event = form.save()
-			return redirect("add-items")
+			return redirect("add_items")
 		return redirect("home")
